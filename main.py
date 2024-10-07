@@ -3,17 +3,14 @@ class Calculator:
         self.symbol = symbol
         self.number = number
 
-    def add(self) -> float:
-        ...
+    def add(self, operand: float) -> float:
+        return self.number + operand
 
-    def sub(self) -> float:
-        ...
+    def sub(self, operand: float) -> float:
+        return self.number - operand
 
-    def div(self) -> float:
-        ...
-
-    def mul(self) -> float:
-        ...
-
-    def calculate(self) -> float:
-        ...
+    def div(self, operand: float) -> float:
+        if operand != 0:
+            return self.number / operand
+        else:
+            raise ValueError("Cannot divide by zero!")
